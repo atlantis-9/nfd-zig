@@ -2,7 +2,7 @@
     .name = .nfdzig,
     .fingerprint = 0x1f85e4a3bcf157d7,
     .version = "0.1.0",
-    .minimum_zig_version = "0.15.1",
+    .minimum_zig_version = "0.16.0-dev.2962+08416b44f",
     .paths = .{
         "nativefiledialog",
         "src",
