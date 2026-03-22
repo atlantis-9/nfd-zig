@@ -6,11 +6,10 @@ pub fn main() !void {
     if (file_path) |path| {
         defer nfd.freePath(path);
         std.debug.print("saveFileDialog result: {s}\n", .{path});
-
-        const open_path = try nfd.openFileDialog("txt", path);
-        if (open_path) |path2| {
-            defer nfd.freePath(path2);
-            std.debug.print("openFileDialog result: {s}\n", .{path2});
-        }
+    }
+    const open_path = try nfd.openFileDialog("txt", null);
+    if (open_path) |path2| {
+        defer nfd.freePath(path2);
+        std.debug.print("openFileDialog result: {s}\n", .{path2});
     }
 }
